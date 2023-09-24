@@ -102,13 +102,13 @@ const plugins = [
 ];
 
 const modules = {
-  eventBus: {
+  /*eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
       redisUrl: CACHE_REDIS_URL,
       ttl: 10,
     }
-  },
+  },*/
   cacheService: {
     resolve: "@medusajs/cache-redis",
     options: {
@@ -128,7 +128,7 @@ const projectConfig = {
   admin_cors: ADMIN_CORS,
   database_type: "postgres",
   // Uncomment the following lines to enable REDIS
-  redis_url: CACHE_REDIS_URL,
+  // redis_url: CACHE_REDIS_URL,
   database_extra:
       process.env.NODE_ENV !== "development"
         ? { ssl: { rejectUnauthorized: false } }
