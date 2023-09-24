@@ -108,7 +108,7 @@ const modules = {
       redisUrl: CACHE_REDIS_URL,
       ttl: 10,
     }
-  },*/
+  },
   cacheService: {
     resolve: "@medusajs/cache-redis",
     options: {
@@ -116,7 +116,7 @@ const modules = {
       ttl: 10,
       maxmemory: 2000000
     }
-  },
+  },*/
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
