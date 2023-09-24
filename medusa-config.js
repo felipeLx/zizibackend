@@ -114,7 +114,7 @@ const modules = {
     options: {
       redisUrl: CACHE_REDIS_URL,
       ttl: 10,
-
+      maxmemory: 2000000
     }
   },
 };
