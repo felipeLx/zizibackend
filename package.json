@@ -1,17 +1,8 @@
 {
-  "name": "medusa-starter-default",
+  "name": "zizi-store",
   "version": "0.0.1",
-  "description": "A starter for Medusa projects.",
-  "author": "Sebastian Rindom <skrindom@gmail.com>",
+  "description": "ecommerce store",
   "license": "MIT",
-  "keywords": [
-    "sqlite",
-    "postgres",
-    "typescript",
-    "ecommerce",
-    "headless",
-    "medusa"
-  ],
   "scripts": {
     "serve": "medusa start",
     "start": "medusa develop",
