@@ -1,13 +1,18 @@
 {
-  "name": "zizi-store",
+  "name": "medusa-starter-default",
   "version": "0.0.1",
-  "description": "ecommerce store",
+  "description": "A starter for Medusa projects.",
   "license": "MIT",
   "scripts": {
-    "serve": "medusa start",
-    "start": "medusa develop",
-    "prepare": "npm run build",
-    "build": "babel src -d dist --extensions \".ts,.js\""
+    "clean": "cross-env ./node_modules/.bin/rimraf dist",
+    "build": "cross-env npm run clean && npm run build:server && npm run build:admin",
+    "build:server": "cross-env npm run clean && tsc -p tsconfig.json",
+    "build:admin": "medusa-admin build --deployment",
+    "watch": "cross-env tsc --watch",
+    "test": "cross-env jest",
+    "start": "npm run build && medusa migrations run && medusa start",
+    "start:custom": "cross-env npm run build && node --preserve-symlinks --trace-warnings index.js",
+    "dev": "cross-env npm run build:server && medusa develop"
   },
   "dependencies": {
     "@medusajs/admin": "^7.1.1",
@@ -19,11 +24,11 @@
     "@medusajs/icons": "^1.0.0",
     "@medusajs/medusa": "^1.16.0",
     "@medusajs/ui": "^1.0.0",
-    "@tanstack/react-query": "4.35.3",
+    "@tanstack/react-query": "4.22.0",
     "babel-preset-medusa-package": "^1.1.13",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "16.3.1",
+    "dotenv": "16.0.3",
     "express": "^4.17.2",
     "medusa-file-supabase": "^0.0.1",
     "medusa-fulfillment-manual": "^1.1.38",
