@@ -2,7 +2,6 @@
   "name": "zizi-store",
   "version": "0.0.1",
   "description": "ecommerce store",
-  "author": "Sebastian Rindom <skrindom@gmail.com>",
   "license": "MIT",
   "scripts": {
     "serve": "medusa start",
