@@ -33,6 +33,7 @@
     "medusa-payment-manual": "^1.0.24",
     "medusa-payment-stripe": "^6.0.4",
     "medusa-plugin-algolia": "^0.2.20",
+    "medusa-react": "^9.0.5",
     "prism-react-renderer": "^2.0.4",
     "typeorm": "^0.3.16"
   },
