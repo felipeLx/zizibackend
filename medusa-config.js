@@ -102,6 +102,7 @@ const plugins = [
 ];
 
 const modules = {
+  
   eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
@@ -117,6 +118,7 @@ const modules = {
       maxmemory: 2000000
     }
   },
+  
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
